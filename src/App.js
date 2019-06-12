@@ -6,6 +6,7 @@ import AllTeas from './pages/AllTeas';
 import Home from './pages/Home';
 import Recommended from './pages/Recommended';
 import ShoppingCart from './pages/ShoppingCart';
+import fetchTeas from './api/fetchTeas';
 
 class App extends Component {
   constructor() {
@@ -14,7 +15,12 @@ class App extends Component {
       shoppingCart: null,
     }
   }
+
+  componentWillMount() {
+    fetchTeas((list) => {console.log(list)});
+  }
   render() {
+    
     return (
       <div className="App">
         <Header />
