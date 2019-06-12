@@ -6,7 +6,7 @@ import AllTeas from './pages/AllTeas';
 import Home from './pages/Home';
 import Recommended from './pages/Recommended';
 import ShoppingCart from './pages/ShoppingCart';
-import fetchTeas from './api/fetchTeas';
+import { fetchTeas, postOrder } from './api/Api';
 
 class App extends Component {
   constructor() {
@@ -18,6 +18,11 @@ class App extends Component {
 
   componentWillMount() {
     fetchTeas((list) => {console.log(list)});
+    postOrder(`{\n\t"client": {\n\t\t"name": "Eduardo",\n\t\t
+    "email": "eduardo@service.com",\n\t\t
+    "country": "Brazil"\n\t},\n\t
+    "teas": [\n\t\t{\n\t\t\t"id": 1,\n\t\t\t"quantity": 2\n\t\t},\n\t\t{\n\t\t\t"
+    id": 4,\n\t\t\t"quantity": 3\n\t\t}\n\t]\n}`,(response) => {console.log(response)});
   }
   render() {
     
