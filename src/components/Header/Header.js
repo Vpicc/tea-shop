@@ -1,16 +1,37 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './Header.css';
 
 const Header = () => (
     <header className="App-header">
         <div className="container">
-            <nav>
-                <Link to="/" > Home</Link> |          
-                <Link to="/all-teas" > Todos os Chás</Link> |
-                <Link to="/recommended" > Recomendações</Link> | 
-                <Link to="/shopping-cart"> Carrinho </Link>
-            </nav>  
+            <nav className="navbar navbar-expand-lg navbar-light bg-light">
+                <NavLink to="/"  exact className="navbar-brand" >Tea Shop</NavLink>
+                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"></span>
+                </button>
+                <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul className="navbar-nav mr-auto">
+                        <li className="nav-item">
+                            <NavLink to="/all-teas" className="nav-link" activeClassName="active" >Todos os Chás</NavLink>
+                        </li>
+                        <li className="nav-item dropdown">
+                            <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Recomendações
+                            </a>
+                            <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <NavLink to="/recommended" className="dropdown-item" >Para se manter acordado</NavLink>
+                                <NavLink to="/xx" className="dropdown-item" >Para ajudar na digestão</NavLink>
+                                <NavLink to="/xxx" className="dropdown-item" >Para uso medicinal</NavLink>
+                                <NavLink to="/xxxx" className="dropdown-item" >Para acompanhar refeições</NavLink>
+                            </div>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink to="/shopping-cart" className="nav-link" >Carrinho</NavLink>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
         </div>
     </header>
 );
