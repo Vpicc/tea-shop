@@ -9,6 +9,6 @@ const AllTeas = (props) => {
         )
     }
 
-    return(<ul class="list-group">{array}</ul>);
+    return(<ul className="list-group">{array}</ul>);
 };
 export default AllTeas;
