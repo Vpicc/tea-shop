@@ -7,31 +7,36 @@ import Home from './pages/Home';
 import Recommended from './pages/Recommended';
 import ShoppingCart from './pages/ShoppingCart';
 import { fetchTeas, postOrder } from './api/Api';
+import mock from './test/mock.json';
 
 class App extends Component {
+  fetchResult = null;
+
   constructor() {
     super();
     this.state = {
       shoppingCart: null,
     }
+
   }
 
   componentWillMount() {
-    fetchTeas((list) => {console.log(list)});
+    this.fetchResult = mock;
+    /*fetchTeas((list) => {console.log(list)});
     postOrder(`{\n\t"client": {\n\t\t"name": "Eduardo",\n\t\t
     "email": "eduardo@service.com",\n\t\t
     "country": "Brazil"\n\t},\n\t
     "teas": [\n\t\t{\n\t\t\t"id": 1,\n\t\t\t"quantity": 2\n\t\t},\n\t\t{\n\t\t\t"
-    id": 4,\n\t\t\t"quantity": 3\n\t\t}\n\t]\n}`,(response) => {console.log(response)});
+    id": 4,\n\t\t\t"quantity": 3\n\t\t}\n\t]\n}`,(response) => {console.log(response)});*/
   }
   render() {
     
     return (
-      <div className="App">
+      <div className="App container">
         <Header />
         <Switch>
           <Route exact path="/"> <Home /> </Route>
-          <Route path="/all-teas"> <AllTeas /> </Route>
+          <Route path="/all-teas"> <AllTeas teaList={this.fetchResult} /> </Route>
           <Route path="/recommended"> <Recommended /> </Route>
           <Route path="/shopping-cart"> <ShoppingCart /> </Route>
         </Switch>

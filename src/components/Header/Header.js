@@ -1,10 +1,8 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import './Header.css';
 
 const Header = () => (
     <header className="App-header">
-        <div className="container">
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
                 <NavLink to="/"  exact className="navbar-brand" >Tea Shop</NavLink>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -16,7 +14,7 @@ const Header = () => (
                             <NavLink to="/all-teas" className="nav-link" activeClassName="active" >Todos os Chás</NavLink>
                         </li>
                         <li className="nav-item dropdown">
-                            <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Recomendações
                             </a>
                             <div className="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -24,6 +22,7 @@ const Header = () => (
                                 <NavLink to="/xx" className="dropdown-item" >Para ajudar na digestão</NavLink>
                                 <NavLink to="/xxx" className="dropdown-item" >Para uso medicinal</NavLink>
                                 <NavLink to="/xxxx" className="dropdown-item" >Para acompanhar refeições</NavLink>
+                                <NavLink to="/xxxx" className="dropdown-item" >Para tomar com leite</NavLink>
                             </div>
                         </li>
                         <li className="nav-item">
@@ -32,7 +31,6 @@ const Header = () => (
                     </ul>
                 </div>
             </nav>
-        </div>
     </header>
 );
 
