@@ -2,7 +2,7 @@ import React from "react";
 import { Col } from "antd";
 import TeaCard from "../TeaCard/TeaCard";
 
-const TeaCardList = ({ teaList, currentFilter }) => {
+const TeaCardList = ({ teaList, currentFilter, addItem }) => {
   const filteredTeas = teaList.filter(tea => {
     switch (currentFilter) {
       case "AWAKE":
@@ -27,6 +27,8 @@ const TeaCardList = ({ teaList, currentFilter }) => {
         country={tea.made_in}
         drinkWithMilk={tea.drink_with_milk}
         price={tea.price}
+        id={tea.id}
+        addItem={addItem}
       />
     </Col>
   ));
