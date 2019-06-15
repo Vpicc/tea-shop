@@ -1,302 +1,302 @@
 [
-    {
-      "id": "1",
-      "price": "12.30",
-      "type": "black tea",
-      "name": "King Williams",
-      "made_in": "England",
-      "steeping_time": "4",
-      "drink_with_milk": "true",
-      "stock_quantity": "10"
-    },
-    {
-      "id": "2",
-      "price": "10.00",
-      "type": "black tea",
-      "name": "Nordic Flavor",
-      "made_in": "England",
-      "steeping_time": "4",
-      "drink_with_milk": "true",
-      "stock_quantity": "19"
-    },
-    {
-      "id": "3",
-      "price": "5.40",
-      "type": "black tea",
-      "name": "Earl Grey Classic",
-      "made_in": "England",
-      "steeping_time": "4",
-      "drink_with_milk": "true",
-      "stock_quantity": "12"
-    },
-    {
-      "id": "4",
-      "price": "12.90",
-      "type": "black tea",
-      "name": "Black Dragon",
-      "made_in": "Ireland",
-      "steeping_time": "4",
-      "drink_with_milk": "true",
-      "stock_quantity": "7"
-    },
-    {
-      "id": "5",
-      "price": "10.00",
-      "type": "black tea",
-      "name": "Spicy Johnson",
-      "made_in": "India",
-      "steeping_time": "4",
-      "drink_with_milk": "true",
-      "stock_quantity": "3"
-    },
-    {
-      "id": "6",
-      "price": "20.00",
-      "type": "black tea",
-      "name": "Irish Blend",
-      "made_in": "Ireland",
-      "steeping_time": "4",
-      "drink_with_milk": "true",
-      "stock_quantity": "0"
-    },
-    {
-      "id": "7",
-      "price": "12.00",
-      "type": "white tea",
-      "name": "Bai Mu Dan",
-      "made_in": "Japan",
-      "steeping_time": "4",
-      "drink_with_milk": "false",
-      "stock_quantity": "1"
-    },
-    {
-      "id": "8",
-      "price": "11.00",
-      "type": "white tea",
-      "name": "White Peone",
-      "made_in": "England",
-      "steeping_time": "4",
-      "drink_with_milk": "false",
-      "stock_quantity": "13"
-    },
-    {
-      "id": "9",
-      "price": "10.00",
-      "type": "white tea",
-      "name": "Silver Needle",
-      "made_in": "England",
-      "steeping_time": "4",
-      "drink_with_milk": "false",
-      "stock_quantity": "12"
-    },
-    {
-      "id": "10",
-      "price": "14.50",
-      "type": "white tea",
-      "name": "Shou Mei",
-      "made_in": "China",
-      "steeping_time": "4",
-      "drink_with_milk": "false",
-      "stock_quantity": "11"
-    },
-    {
-      "id": "11",
-      "price": "15.80",
-      "type": "white tea",
-      "name": "Pai Mu Tan",
-      "made_in": "China",
-      "steeping_time": "4",
-      "drink_with_milk": "false",
-      "stock_quantity": "0"
-    },
-    {
-      "id": "12",
-      "price": "12.00",
-      "type": "white tea",
-      "name": "Snow Bud",
-      "made_in": "England",
-      "steeping_time": "4",
-      "drink_with_milk": "false",
-      "stock_quantity": "7"
-    },
-    {
-      "id": "13",
-      "price": "19.00",
-      "type": "green tea",
-      "name": "Genmaicha",
-      "made_in": "Japan",
-      "steeping_time": "4",
-      "drink_with_milk": "false",
-      "stock_quantity": "3"
-    },
-    {
-      "id": "14",
-      "price": "22.00",
-      "type": "green tea",
-      "name": "Gyokuro",
-      "made_in": "Japan",
-      "steeping_time": "4",
-      "drink_with_milk": "false",
-      "stock_quantity": "7"
-    },
-    {
-      "id": "15",
-      "price": "18.00",
-      "type": "green tea",
-      "name": "Sencha",
-      "made_in": "Japan",
-      "steeping_time": "4",
-      "drink_with_milk": "false",
-      "stock_quantity": "9"
-    },
-    {
-      "id": "16",
-      "price": "9.00",
-      "type": "green tea",
-      "name": "Longjing",
-      "made_in": "China",
-      "steeping_time": "4",
-      "drink_with_milk": "false",
-      "stock_quantity": "10"
-    },
-    {
-      "id": "17",
-      "price": "4.00",
-      "type": "green tea",
-      "name": "Lu'an Melon Seed",
-      "made_in": "China",
-      "steeping_time": "4",
-      "drink_with_milk": "false",
-      "stock_quantity": "0"
-    },
-    {
-      "id": "18",
-      "price": "10.00",
-      "type": "green tea",
-      "name": "Chun Mee",
-      "made_in": "China",
-      "steeping_time": "4",
-      "drink_with_milk": "false",
-      "stock_quantity": "9"
-    },
-    {
-      "id": "19",
-      "price": "8.00",
-      "type": "oolong tea",
-      "name": "Narcissus",
-      "made_in": "England",
-      "steeping_time": "4",
-      "drink_with_milk": "false",
-      "stock_quantity": "3"
-    },
-    {
-      "id": "20",
-      "price": "8.90",
-      "type": "oolong tea",
-      "name": "Rougui",
-      "made_in": "China",
-      "steeping_time": "4",
-      "drink_with_milk": "false",
-      "stock_quantity": "13"
-    },
-    {
-      "id": "21",
-      "price": "7.80",
-      "type": "oolong tea",
-      "name": "Big Red Robe",
-      "made_in": "England",
-      "steeping_time": "4",
-      "drink_with_milk": "false",
-      "stock_quantity": "20"
-    },
-    {
-      "id": "22",
-      "price": "6.21",
-      "type": "oolong tea",
-      "name": "Bai Jiguan",
-      "made_in": "China",
-      "steeping_time": "4",
-      "drink_with_milk": "false",
-      "stock_quantity": "5"
-    },
-    {
-      "id": "23",
-      "price": "23.00",
-      "type": "oolong tea",
-      "name": "Shui Jin Gui",
-      "made_in": "China",
-      "steeping_time": "4",
-      "drink_with_milk": "true",
-      "stock_quantity": "9"
-    },
-    {
-      "id": "24",
-      "price": "12.90",
-      "type": "oolong tea",
-      "name": "Dongding",
-      "made_in": "China",
-      "steeping_time": "4",
-      "drink_with_milk": "true",
-      "stock_quantity": "6"
-    },
-    {
-      "id": "25",
-      "price": "6.78",
-      "type": "chai",
-      "name": "Earl Grey Spices",
-      "made_in": "England",
-      "steeping_time": "4",
-      "drink_with_milk": "true",
-      "stock_quantity": "1"
-    },
-    {
-      "id": "26",
-      "price": "9.00",
-      "type": "chai",
-      "name": "Reuel Reynolds Tea",
-      "made_in": "England",
-      "steeping_time": "4",
-      "drink_with_milk": "true",
-      "stock_quantity": "2"
-    },
-    {
-      "id": "27",
-      "price": "30.90",
-      "type": "chai",
-      "name": "India Flavor",
-      "made_in": "India",
-      "steeping_time": "4",
-      "drink_with_milk": "false",
-      "stock_quantity": "0"
-    },
-    {
-      "id": "28",
-      "price": "12.00",
-      "type": "chai",
-      "name": "Masala Chai",
-      "made_in": "India",
-      "steeping_time": "4",
-      "drink_with_milk": "false",
-      "stock_quantity": "9"
-    },
-    {
-      "id": "29",
-      "price": "13.00",
-      "type": "chai",
-      "name": "Pakistani",
-      "made_in": "India",
-      "steeping_time": "4",
-      "drink_with_milk": "true",
-      "stock_quantity": "10"
-    },
-    {
-      "id": "30",
-      "price": "11.20",
-      "type": "chai",
-      "name": "Earl Grey",
-      "made_in": "India",
-      "steeping_time": "4",
-      "drink_with_milk": "true",
-      "stock_quantity": "11"
-    }
-  ]
+  {
+    "id": "1",
+    "price": "12.30",
+    "type": "black tea",
+    "name": "King Williams",
+    "made_in": "England",
+    "steeping_time": "4",
+    "drink_with_milk": "true",
+    "stock_quantity": "10"
+  },
+  {
+    "id": "2",
+    "price": "10.00",
+    "type": "black tea",
+    "name": "Nordic Flavor",
+    "made_in": "England",
+    "steeping_time": "4",
+    "drink_with_milk": "true",
+    "stock_quantity": "19"
+  },
+  {
+    "id": "3",
+    "price": "5.40",
+    "type": "black tea",
+    "name": "Earl Grey Classic",
+    "made_in": "England",
+    "steeping_time": "4",
+    "drink_with_milk": "true",
+    "stock_quantity": "12"
+  },
+  {
+    "id": "4",
+    "price": "12.90",
+    "type": "black tea",
+    "name": "Black Dragon",
+    "made_in": "Ireland",
+    "steeping_time": "4",
+    "drink_with_milk": "true",
+    "stock_quantity": "7"
+  },
+  {
+    "id": "5",
+    "price": "10.00",
+    "type": "black tea",
+    "name": "Spicy Johnson",
+    "made_in": "India",
+    "steeping_time": "4",
+    "drink_with_milk": "true",
+    "stock_quantity": "3"
+  },
+  {
+    "id": "6",
+    "price": "20.00",
+    "type": "black tea",
+    "name": "Irish Blend",
+    "made_in": "Ireland",
+    "steeping_time": "4",
+    "drink_with_milk": "true",
+    "stock_quantity": "0"
+  },
+  {
+    "id": "7",
+    "price": "12.00",
+    "type": "white tea",
+    "name": "Bai Mu Dan",
+    "made_in": "Japan",
+    "steeping_time": "4",
+    "drink_with_milk": "false",
+    "stock_quantity": "1"
+  },
+  {
+    "id": "8",
+    "price": "11.00",
+    "type": "white tea",
+    "name": "White Peone",
+    "made_in": "England",
+    "steeping_time": "4",
+    "drink_with_milk": "false",
+    "stock_quantity": "13"
+  },
+  {
+    "id": "9",
+    "price": "10.00",
+    "type": "white tea",
+    "name": "Silver Needle",
+    "made_in": "England",
+    "steeping_time": "4",
+    "drink_with_milk": "false",
+    "stock_quantity": "12"
+  },
+  {
+    "id": "10",
+    "price": "14.50",
+    "type": "white tea",
+    "name": "Shou Mei",
+    "made_in": "China",
+    "steeping_time": "4",
+    "drink_with_milk": "false",
+    "stock_quantity": "11"
+  },
+  {
+    "id": "11",
+    "price": "15.80",
+    "type": "white tea",
+    "name": "Pai Mu Tan",
+    "made_in": "China",
+    "steeping_time": "4",
+    "drink_with_milk": "false",
+    "stock_quantity": "0"
+  },
+  {
+    "id": "12",
+    "price": "12.00",
+    "type": "white tea",
+    "name": "Snow Bud",
+    "made_in": "England",
+    "steeping_time": "4",
+    "drink_with_milk": "false",
+    "stock_quantity": "7"
+  },
+  {
+    "id": "13",
+    "price": "19.00",
+    "type": "green tea",
+    "name": "Genmaicha",
+    "made_in": "Japan",
+    "steeping_time": "4",
+    "drink_with_milk": "false",
+    "stock_quantity": "3"
+  },
+  {
+    "id": "14",
+    "price": "22.00",
+    "type": "green tea",
+    "name": "Gyokuro",
+    "made_in": "Japan",
+    "steeping_time": "4",
+    "drink_with_milk": "false",
+    "stock_quantity": "7"
+  },
+  {
+    "id": "15",
+    "price": "18.00",
+    "type": "green tea",
+    "name": "Sencha",
+    "made_in": "Japan",
+    "steeping_time": "4",
+    "drink_with_milk": "false",
+    "stock_quantity": "9"
+  },
+  {
+    "id": "16",
+    "price": "9.00",
+    "type": "green tea",
+    "name": "Longjing",
+    "made_in": "China",
+    "steeping_time": "4",
+    "drink_with_milk": "false",
+    "stock_quantity": "10"
+  },
+  {
+    "id": "17",
+    "price": "4.00",
+    "type": "green tea",
+    "name": "Lu'an Melon Seed",
+    "made_in": "China",
+    "steeping_time": "4",
+    "drink_with_milk": "false",
+    "stock_quantity": "0"
+  },
+  {
+    "id": "18",
+    "price": "10.00",
+    "type": "green tea",
+    "name": "Chun Mee",
+    "made_in": "China",
+    "steeping_time": "4",
+    "drink_with_milk": "false",
+    "stock_quantity": "9"
+  },
+  {
+    "id": "19",
+    "price": "8.00",
+    "type": "oolong tea",
+    "name": "Narcissus",
+    "made_in": "England",
+    "steeping_time": "4",
+    "drink_with_milk": "false",
+    "stock_quantity": "3"
+  },
+  {
+    "id": "20",
+    "price": "8.90",
+    "type": "oolong tea",
+    "name": "Rougui",
+    "made_in": "China",
+    "steeping_time": "4",
+    "drink_with_milk": "false",
+    "stock_quantity": "13"
+  },
+  {
+    "id": "21",
+    "price": "7.80",
+    "type": "oolong tea",
+    "name": "Big Red Robe",
+    "made_in": "England",
+    "steeping_time": "4",
+    "drink_with_milk": "false",
+    "stock_quantity": "20"
+  },
+  {
+    "id": "22",
+    "price": "6.21",
+    "type": "oolong tea",
+    "name": "Bai Jiguan",
+    "made_in": "China",
+    "steeping_time": "4",
+    "drink_with_milk": "false",
+    "stock_quantity": "5"
+  },
+  {
+    "id": "23",
+    "price": "23.00",
+    "type": "oolong tea",
+    "name": "Shui Jin Gui",
+    "made_in": "China",
+    "steeping_time": "4",
+    "drink_with_milk": "true",
+    "stock_quantity": "9"
+  },
+  {
+    "id": "24",
+    "price": "12.90",
+    "type": "oolong tea",
+    "name": "Dongding",
+    "made_in": "China",
+    "steeping_time": "4",
+    "drink_with_milk": "true",
+    "stock_quantity": "6"
+  },
+  {
+    "id": "25",
+    "price": "6.78",
+    "type": "chai",
+    "name": "Earl Grey Spices",
+    "made_in": "England",
+    "steeping_time": "4",
+    "drink_with_milk": "true",
+    "stock_quantity": "1"
+  },
+  {
+    "id": "26",
+    "price": "9.00",
+    "type": "chai",
+    "name": "Reuel Reynolds Tea",
+    "made_in": "England",
+    "steeping_time": "4",
+    "drink_with_milk": "true",
+    "stock_quantity": "2"
+  },
+  {
+    "id": "27",
+    "price": "30.90",
+    "type": "chai",
+    "name": "India Flavor",
+    "made_in": "India",
+    "steeping_time": "4",
+    "drink_with_milk": "false",
+    "stock_quantity": "0"
+  },
+  {
+    "id": "28",
+    "price": "12.00",
+    "type": "chai",
+    "name": "Masala Chai",
+    "made_in": "India",
+    "steeping_time": "4",
+    "drink_with_milk": "false",
+    "stock_quantity": "9"
+  },
+  {
+    "id": "29",
+    "price": "13.00",
+    "type": "chai",
+    "name": "Pakistani",
+    "made_in": "India",
+    "steeping_time": "4",
+    "drink_with_milk": "true",
+    "stock_quantity": "10"
+  },
+  {
+    "id": "30",
+    "price": "11.20",
+    "type": "chai",
+    "name": "Earl Grey",
+    "made_in": "India",
+    "steeping_time": "4",
+    "drink_with_milk": "true",
+    "stock_quantity": "11"
+  }
+]
