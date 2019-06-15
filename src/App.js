@@ -56,6 +56,26 @@ class App extends Component {
     this.setState({ cartList });
   };
 
+  changeItemQuantity = (quantity, id) => {
+    const cartList = { ...this.state.cartList };
+    console.log(quantity, id);
+
+    if (cartList[id]) {
+      cartList[id] = quantity;
+    }
+    this.setState({ cartList });
+  };
+
+  removeFromCart = id => {
+    const cartList = { ...this.state.cartList };
+    console.log(cartList);
+    if (cartList.length === undefined) {
+      this.setState({ cartList: [] });
+    } else {
+      this.setState({ cartList });
+    }
+  };
+
   render() {
     const { filter, teaList, cartList } = this.state;
     return (
@@ -77,7 +97,12 @@ class App extends Component {
           </Col>
 
           <Col span={8}>
-            <ShoppingCart cartList={cartList} />
+            <ShoppingCart
+              cartList={cartList}
+              teaList={teaList}
+              changeQuantity={this.changeItemQuantity}
+              removeFromCart={this.removeFromCart}
+            />
           </Col>
         </Row>
       </div>
