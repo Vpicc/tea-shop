@@ -45,8 +45,15 @@ class App extends Component {
     });
   };
 
-  addToCart = item => {
-    console.log(item);
+  addToCart = id => {
+    const cartList = { ...this.state.cartList };
+
+    if (cartList[id]) {
+      cartList[id]++;
+    } else {
+      cartList[id] = 1;
+    }
+    this.setState({ cartList });
   };
 
   render() {
