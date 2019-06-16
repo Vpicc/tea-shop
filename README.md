@@ -1,6 +1,6 @@
 # tea-shop
 
-##ara executar
+#Para executar
 npm install
 
 npm start
