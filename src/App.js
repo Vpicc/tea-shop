@@ -85,11 +85,11 @@ class App extends Component {
       <div className="App">
         <Header />
         <Row gutter={48}>
-          <Col span={3}>
+          <Col xs={24} sm={24} md={24} lg={4} xl={3}>
             <Menu currentFilter={filter} setFilter={this.setFilter} />
           </Col>
 
-          <Col span={13}>
+          <Col xs={24} sm={24} md={24} lg={10} xl={13}>
             <Row gutter={48}>
               <TeaCardList
                 teaList={teaList}
@@ -99,7 +99,7 @@ class App extends Component {
             </Row>
           </Col>
 
-          <Col span={8}>
+          <Col xs={24} sm={24} md={24} lg={10} xl={8}>
             <ShoppingCart
               cartList={cartList}
               teaList={teaList}

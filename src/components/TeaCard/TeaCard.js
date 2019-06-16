@@ -1,7 +1,13 @@
 import React from "react";
 import { Card, Button, Typography } from "antd";
+import map from "../../img/map.png";
+import teaCup from "../../img/teaCup.png";
+import milk from "../../img/milk.png";
+import crossed from "../../img/crossed.png";
 
 const { Title } = Typography;
+
+const imgStyle = { width: 24 };
 
 const TeaCard = ({
   teaName,
@@ -14,12 +20,21 @@ const TeaCard = ({
   addItem
 }) => (
   <Card title={teaName}>
-    <p>Tipo de Chá: {teaType}</p>
-    <p>País: {country}</p>
+    <p>
+      <img src={teaCup} alt="Chá" style={imgStyle} /> {teaType}
+    </p>
+    <p>
+      <img src={map} alt="País" style={imgStyle} /> {country}
+    </p>
     {drinkWithMilk === "true" ? (
-      <p>Tomável com leite</p>
+      <p>
+        <img src={milk} alt="Leite" style={imgStyle} />
+        Opção com leite
+      </p>
     ) : (
-      <p>Não tomável com leite</p>
+      <p>
+        <img src={crossed} alt="X" style={imgStyle} /> Sem opção com leite
+      </p>
     )}
     <p>Quantidade em Estoque: {quantity}</p>
     <Title level={2}>R${price}</Title>

@@ -20,7 +20,7 @@ const TeaCardList = ({ teaList, currentFilter, addItem }) => {
     }
   });
   return filteredTeas.map(tea => (
-    <Col span={8} key={tea.id}>
+    <Col xs={24} sm={12} md={12} lg={12} xl={8} key={tea.id}>
       <TeaCard
         teaName={tea.name}
         teaType={tea.type}
