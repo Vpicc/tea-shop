@@ -1,13 +1,14 @@
 import React, { Component } from "react";
+import { Row, Col, Spin, Typography } from "antd";
 import "./App.css";
+import "antd/dist/antd.css";
 import Header from "./components/Header/Header";
 import { fetchTeas, postOrder } from "./api/Api";
-import mock from "./test/mock.json";
-import { Row, Col } from "antd";
-import "antd/dist/antd.css";
 import Menu from "./components/Menu/Menu";
 import TeaCardList from "./components/TeaCardList/TeaCardList";
 import ShoppingCart from "./components/ShoppingCart/ShoppingCart";
+
+const { Title } = Typography;
 
 class App extends Component {
   constructor() {
@@ -22,13 +23,9 @@ class App extends Component {
   }
 
   componentWillMount() {
-    /*fetchTeas((list) => {console.log(list)});
-    postOrder(`{\n\t"client": {\n\t\t"name": "Eduardo",\n\t\t
-    "email": "eduardo@service.com",\n\t\t
-    "country": "Brazil"\n\t},\n\t
-    "teas": [\n\t\t{\n\t\t\t"id": 1,\n\t\t\t"quantity": 2\n\t\t},\n\t\t{\n\t\t\t"
-    id": 4,\n\t\t\t"quantity": 3\n\t\t}\n\t]\n}`,(response) => {console.log(response)});*/
-    this.processTeaList(mock);
+    fetchTeas(list => {
+      this.processTeaList(list);
+    });
   }
 
   processTeaList(list) {
@@ -126,13 +123,21 @@ class App extends Component {
           </Col>
 
           <Col xs={24} sm={24} md={24} lg={10} xl={13}>
-            <Row gutter={48}>
-              <TeaCardList
-                teaList={teaList}
-                currentFilter={filter}
-                addItem={this.addToCart}
-              />
-            </Row>
+            {teaList === null ? (
+              <Spin />
+            ) : teaList.length === 0 ? (
+              <Title level={2} style={{ color: "red" }}>
+                Falha ao carregar lista de chás
+              </Title>
+            ) : (
+              <Row gutter={48}>
+                <TeaCardList
+                  teaList={teaList}
+                  currentFilter={filter}
+                  addItem={this.addToCart}
+                />
+              </Row>
+            )}
           </Col>
 
           <Col xs={24} sm={24} md={24} lg={10} xl={8}>

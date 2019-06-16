@@ -26,6 +26,7 @@ function fetchTeas(callback) {
     });
 
     res.on("error", function(error) {
+      callback({});
       console.error(error);
     });
   });
