@@ -1,11 +1,21 @@
 import React, { Component } from "react";
-import { Card, Table, InputNumber, Icon, Button } from "antd";
+import { Card, Table, InputNumber, Button, Typography } from "antd";
+
+const { Title } = Typography;
 
 class ShoppingCart extends Component {
+  calculateTotalPrice(dataSource) {
+    let total = 0;
+    for (let element in dataSource) {
+      total += parseFloat(element.priceTotal);
+    }
+    return total;
+  }
   render() {
     const { cartList, teaList, removeFromCart, changeQuantity } = this.props;
 
     let dataSource = [];
+    let total = 0;
     for (let key in cartList) {
       if (cartList.hasOwnProperty(key)) {
         let element = {};
@@ -22,7 +32,9 @@ class ShoppingCart extends Component {
           />
         );
         element.priceUnit = `R$${teaList[key].price}`;
-        element.priceTotal = `R$${teaList[key].price * cartList[key]}`;
+        let teaTotalPrice = (teaList[key].price * cartList[key]).toFixed(2);
+        element.priceTotal = `R$${teaTotalPrice}`;
+        total += parseFloat(teaTotalPrice);
         element.remove = (
           <Button icon="delete" onClick={() => removeFromCart(key)} />
         );
@@ -32,7 +44,7 @@ class ShoppingCart extends Component {
 
     return (
       <Card title="Carrinho">
-        {cartList.length === 0 ? (
+        {!cartList || Object.keys(cartList).length === 0 ? (
           <p>Não há items no Carrinho.</p>
         ) : (
           <>
@@ -60,6 +72,7 @@ class ShoppingCart extends Component {
               bordered
               pagination={false}
             />
+            <Title level={3}>Valor Total: R${total.toFixed(2)}</Title>
             <Button type="primary" block>
               Comprar
             </Button>

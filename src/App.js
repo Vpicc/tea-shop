@@ -13,7 +13,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      cartList: [],
+      cartList: {},
       filter: "ALL",
       teaList: null
     };
@@ -47,9 +47,12 @@ class App extends Component {
 
   addToCart = id => {
     const cartList = { ...this.state.cartList };
+    const teaList = this.state.teaList;
 
     if (cartList[id]) {
-      cartList[id]++;
+      if (cartList[id] < teaList[id].stock_quantity) {
+        cartList[id]++;
+      }
     } else {
       cartList[id] = 1;
     }
@@ -58,22 +61,22 @@ class App extends Component {
 
   changeItemQuantity = (quantity, id) => {
     const cartList = { ...this.state.cartList };
-    console.log(quantity, id);
+    const teaList = this.state.teaList;
 
     if (cartList[id]) {
-      cartList[id] = quantity;
+      if (quantity > teaList[id].stock_quantity) {
+        cartList[id] = teaList[id].stock_quantity;
+      } else {
+        cartList[id] = quantity;
+      }
     }
     this.setState({ cartList });
   };
 
   removeFromCart = id => {
     const cartList = { ...this.state.cartList };
-    console.log(cartList);
-    if (cartList.length === undefined) {
-      this.setState({ cartList: [] });
-    } else {
-      this.setState({ cartList });
-    }
+    delete cartList[id];
+    this.setState({ cartList });
   };
 
   render() {

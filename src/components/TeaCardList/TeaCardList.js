@@ -29,6 +29,7 @@ const TeaCardList = ({ teaList, currentFilter, addItem }) => {
         price={tea.price}
         id={tea.id}
         addItem={addItem}
+        quantity={tea.stock_quantity}
       />
     </Col>
   ));

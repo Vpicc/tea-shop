@@ -10,6 +10,7 @@ const TeaCard = ({
   drinkWithMilk,
   price,
   id,
+  quantity,
   addItem
 }) => (
   <Card title={teaName}>
@@ -20,8 +21,14 @@ const TeaCard = ({
     ) : (
       <p>Não tomável com leite</p>
     )}
+    <p>Quantidade em Estoque: {quantity}</p>
     <Title level={2}>R${price}</Title>
-    <Button type="primary" onClick={() => addItem(id)} block>
+    <Button
+      type="primary"
+      onClick={() => addItem(id)}
+      block
+      disabled={quantity === "0"}
+    >
       Adicionar
     </Button>
   </Card>
