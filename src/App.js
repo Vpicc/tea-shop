@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Row, Col, Spin, Typography } from "antd";
+import { Row, Col, Spin, Typography, Affix } from "antd";
 import "./App.css";
 import "antd/dist/antd.css";
 import Header from "./components/Header/Header";
@@ -119,7 +119,9 @@ class App extends Component {
         <Header />
         <Row>
           <Col xs={24} sm={24} md={24} lg={4} xl={3}>
-            <Menu currentFilter={filter} setFilter={this.setFilter} />
+            <Affix>
+              <Menu currentFilter={filter} setFilter={this.setFilter} />
+            </Affix>
           </Col>
 
           <Col xs={24} sm={24} md={24} lg={10} xl={13}>
