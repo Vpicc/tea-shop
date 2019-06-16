@@ -84,7 +84,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        <Row gutter={48}>
+        <Row>
           <Col xs={24} sm={24} md={24} lg={4} xl={3}>
             <Menu currentFilter={filter} setFilter={this.setFilter} />
           </Col>
