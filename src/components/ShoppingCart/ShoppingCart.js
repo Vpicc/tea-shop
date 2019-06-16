@@ -16,17 +16,23 @@ const { Title } = Typography;
 
 class Cart extends Component {
   checkInfoAndSubmit = () => {
-    const cartList = this.props.cartList;
-    this.props.form.validateFields((err, values) => {
+    const { sendCart } = this.props;
+    this.props.form.validateFields((err, client) => {
       if (!err) {
-        console.log("success", values, cartList);
+        sendCart(client);
       }
     });
   };
 
   render() {
     const { getFieldDecorator } = this.props.form;
-    const { cartList, teaList, removeFromCart, changeQuantity } = this.props;
+    const {
+      cartList,
+      teaList,
+      removeFromCart,
+      changeQuantity,
+      sendingOrder
+    } = this.props;
     const formItemLayout = {
       labelCol: {
         xs: { span: 4 },
@@ -143,6 +149,7 @@ class Cart extends Component {
               type="primary"
               onClick={() => this.checkInfoAndSubmit()}
               block
+              loading={sendingOrder}
             >
               Enviar Pedido
             </Button>

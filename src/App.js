@@ -15,7 +15,9 @@ class App extends Component {
     this.state = {
       cartList: {},
       filter: "ALL",
-      teaList: null
+      teaList: null,
+      sendSuccess: null,
+      sendingOrder: false
     };
   }
 
@@ -46,6 +48,7 @@ class App extends Component {
   };
 
   addToCart = id => {
+    const sendSuccess = this.state.sendSuccess;
     const cartList = { ...this.state.cartList };
     const teaList = this.state.teaList;
 
@@ -57,6 +60,10 @@ class App extends Component {
       cartList[id] = 1;
     }
     this.setState({ cartList });
+
+    if (sendSuccess === true) {
+      this.setState({ sendSuccess: null });
+    }
   };
 
   changeItemQuantity = (quantity, id) => {
@@ -79,8 +86,37 @@ class App extends Component {
     this.setState({ cartList });
   };
 
+  sendCart = client => {
+    let infoToSend = { client: {}, teas: [] };
+    let cartList = { ...this.state.cartList };
+
+    infoToSend.client = client;
+
+    for (let key in cartList) {
+      if (cartList.hasOwnProperty(key)) {
+        let teaObject = {};
+        teaObject.id = key;
+        teaObject.quantity = cartList[key];
+        infoToSend.teas.push(teaObject);
+      }
+    }
+    console.log("Order", infoToSend);
+    this.setState({ sendingOrder: true });
+    postOrder(JSON.stringify(infoToSend), response => {
+      if (response.success === true) {
+        console.log(response);
+        this.setState({ sendSuccess: true });
+        cartList = {};
+        this.setState({ cartList });
+      } else {
+        this.setState({ sendSuccess: false });
+      }
+      this.setState({ sendingOrder: false });
+    });
+  };
+
   render() {
-    const { filter, teaList, cartList } = this.state;
+    const { filter, teaList, cartList, sendSuccess, sendingOrder } = this.state;
     return (
       <div className="App">
         <Header />
@@ -105,7 +141,15 @@ class App extends Component {
               teaList={teaList}
               changeQuantity={this.changeItemQuantity}
               removeFromCart={this.removeFromCart}
+              sendCart={this.sendCart}
+              sendingOrder={sendingOrder}
             />
+            {sendSuccess ? (
+              <p style={{ color: "green" }}>Pedido enviado! </p>
+            ) : null}
+            {sendSuccess === false ? (
+              <p style={{ color: "red" }}>Falha ao enviar pedido </p>
+            ) : null}
           </Col>
         </Row>
       </div>
